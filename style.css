@@ -1,0 +1,192 @@
+.archivo {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imbue {
+    font-family: "Imbue", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #202020;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FCFCFC;
+}
+
+h1 {
+    font-weight: lighter;
+    text-align: center;
+    padding: 30px;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: 'Archivo Black';
+    font-size: 3em;
+}
+
+h3 {
+    padding-top: 2em;
+    font-family: 'Arial';
+    font-size: 130%;
+}
+
+button {
+    margin-top: 40px;
+    background: linear-gradient(90deg, rgba(70, 0, 38, 1) 4%, rgba(154, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    ;
+    border-radius: 8px;
+    border: #d7833f;
+    box-shadow: 0 0 10px #cc8343;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    box-shadow: rgba(205, 117, 63, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: 0 2.6rem;
+    }
+}
+
+.accroche {
+    color: white;
+    height: 100%;
+    text-shadow: 3px 4px 5px black,
+        -3px -2px 5px black,
+        -11px 7px 14px black,
+        11px 2px 6px black;
+    background-image: url("../img/big_banniere_ssbu.webp"), url("../img/big_banniere_ssbu.webp");
+    background-size: cover;
+    background-attachment: local;
+    animation: scroll 90s linear infinite;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    line-height: 4em;
+    margin-bottom: 50px;
+}
+
+.accroche h3 {
+    line-height: normal;
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+nav {
+    font-family: 'Montserrat';
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+    position: sticky;
+    top: 5px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    font-weight: bolder;
+    border-bottom: 2px solid #B54548;
+}
+
+.explication {
+    background-color: #F0F0F0;
+    margin: auto;
+    max-width: 65%;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: 'Montserrat';
+}
+
+#illustration1 {
+    width: 400px;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    float: left;
+    shape-outside: margin-box;
+    margin: 0 40px 5px 0;
+}
+
+.explication::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.explication h2 {
+    margin-bottom: 10px;
+}
+
+.explication p {
+    line-height: 1.4;
+}

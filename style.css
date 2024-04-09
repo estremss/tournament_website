@@ -4,13 +4,6 @@
     font-style: normal;
 }
 
-.imbue {
-    font-family: "Imbue", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -32,10 +25,24 @@ body {
 }
 
 h1 {
-    font-weight: lighter;
     text-align: center;
     padding: 30px;
     font-size: 45px;
+}
+
+.entete {
+    background-image: url("./img/upvd_noir.png");
+    background-repeat: no-repeat;
+    background-position-x: 25px;
+    background-position-y: 17px;
+    background-size: contain;
+}
+
+@media (max-width: 1100px) {
+    .entete {
+        background-image: none;
+        /* Cacher le logo sur les appareils mobiles */
+    }
 }
 
 h2 {
@@ -108,6 +115,15 @@ button:hover {
     line-height: normal;
 }
 
+@media (max-width: 767px) {
+    .accroche {
+        padding: 10% 5%;
+        /* Ajustez les marges pour s'adapter aux écrans plus petits */
+        font-size: 10px;
+        /* Ajustez la taille de la police pour les appareils mobiles */
+    }
+}
+
 @keyframes scroll {
     from {
         background-position: 0 0;
@@ -138,7 +154,6 @@ nav {
     font-family: 'Montserrat';
     text-align: center;
     padding: 20px;
-    margin: 0 auto;
     font-size: 20px;
     position: sticky;
     top: 5px;
@@ -158,9 +173,23 @@ nav a:hover {
     border-bottom: 2px solid #B54548;
 }
 
+@media (max-width: 767px) {
+    nav {
+        position: static;
+        display: block;
+    }
+
+    nav li {
+        width: 100%;
+        float: none;
+    }
+}
+
+
 .explication {
     background-color: #F0F0F0;
     margin: auto;
+    vertical-align: baseline;
     max-width: 65%;
     padding: 30px;
     border-radius: 15px;
@@ -189,4 +218,14 @@ nav a:hover {
 
 .explication p {
     line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+    .explication {
+        max-width: 70%;
+    }
+
+    #illustration1 {
+        max-width: 100%;
+    }
 }

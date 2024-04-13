@@ -1,23 +1,21 @@
 <!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <title>Tournoi SSBU</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Imbue:opsz,wght@10..100,100..900&display=swap"
-        rel="stylesheet">
-    <link href="..\\style.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 
 <body>
     <div class="entete">
@@ -26,7 +24,7 @@
 
     <nav>
         <ul>
-            <li><a href="personnages.html">PERSONNAGES</a></li>
+            <li><a href="index.html">ACCUEIL</a></li>
             <li><a href="regles.html">RÈGLES</a></li>
             <li><a href="tournoi.html">TOURNOI</a></li>
             <li><a href="apropos.html">À PROPOS</a></li>
@@ -36,7 +34,7 @@
     <div class="accroche">
         <h2>Vous souhaitez animer vos soirées en organisant des tournois Smash Bros ?</h2>
         <h3>C'est possible en seulement quelques clics grâce à notre générateur de tournoi en ligne.</h3>
-        <button id="boutonCommencer">COMMENCER</button>
+        <button id="boutonCommencer">CONNEXION</button>
     </div>
 
     <div class="explication">
@@ -48,36 +46,31 @@
             de créer des souvenirs impérissables et de repousser les limites de vos compétences de joueur.</p>
     </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima nisi, rem amet nam temporibus quod dicta
-        corrupti ea nihil dolorum dignissimos in placeat possimus iste recusandae quas minus voluptas. Ea a accusamus
-        rem hic rerum. Aliquid beatae quaerat cum incidunt. Tempore illo et non consequuntur tenetur amet nulla
-        exercitationem, enim voluptates officia! Minus delectus possimus reprehenderit consectetur in harum quas a rem.
-        Corporis facere cumque dolorum perferendis? Dignissimos quod, dolorem necessitatibus consequatur assumenda alias
-        atque veritatis nam quam tempora eos aut soluta. Est ullam assumenda dolorem ipsum. Error nam id neque itaque
-        qui? Sapiente, voluptas voluptatibus ipsa dolore fugiat eligendi dolores amet tenetur repudiandae consectetur,
-        ducimus nobis distinctio deleniti quaerat perspiciatis nam maiores. Autem blanditiis nobis eaque consequatur
-        rem, aperiam, facere, commodi officia voluptatum ullam id praesentium eos sequi. Ullam sed excepturi repellendus
-        vero, atque hic. Iure officiis eveniet modi a quod earum quae, enim iste, aspernatur, voluptatum vitae pariatur
-        delectus aliquam at. Molestias autem unde minus! Porro ipsa doloribus esse aperiam vel, quae commodi amet
-        consequuntur molestias fugit qui quod reprehenderit repellat quia consequatur nisi quas atque ut fuga ea
-        repellendus laudantium facere. Illum recusandae omnis quae quam et ducimus, ex maxime aspernatur dolores
-        voluptas necessitatibus. Molestiae necessitatibus sequi repudiandae ea, reiciendis, maiores facere, laboriosam
-        excepturi consequatur officiis ipsum dignissimos a. Eligendi delectus quibusdam nesciunt eveniet dolore quo
-        architecto ducimus, quaerat quas excepturi consequatur labore hic exercitationem? Provident inventore minus
-        nihil incidunt voluptatum eum illum cupiditate ea recusandae mollitia natus iure sapiente molestiae quod,
-        quibusdam quae voluptate sit velit beatae quos fugiat aut. Provident et adipisci sint consequatur amet nostrum
-        consequuntur! Impedit placeat libero natus repudiandae commodi ducimus cum eaque dolore. Deserunt esse maxime
-        nihil saepe aliquid neque nostrum. Quod ipsa corrupti voluptas necessitatibus sunt ullam aspernatur dolore.
-        Aliquam, dignissimos vero libero reiciendis consequatur vitae soluta facilis, nesciunt eum saepe illo hic nobis
-        facere sint? Architecto asperiores, nisi cum at assumenda dignissimos modi, nulla omnis animi voluptas excepturi
-        laboriosam fuga quam dolores ab nostrum. Blanditiis aliquid ipsum ea officia distinctio. Itaque veritatis error
-        temporibus recusandae nihil dolorum rem deleniti et consectetur, vel dicta! Voluptas adipisci architecto, eaque
-        deleniti beatae sit quod inventore qui sunt eius dicta totam minima delectus fuga aperiam labore magnam, atque
-        cum doloribus quasi dolores temporibus ducimus perspiciatis necessitatibus! Velit atque minima ipsa ipsam?
-        Aspernatur facilis repellat aperiam. In, numquam fugiat nobis repellat aliquid impedit quia doloribus aut
-        temporibus quas accusantium facere recusandae tenetur optio?</p>
+    <img id="logo_smash" src="../img/ssbu_logo.png" alt="logo smash bros">
 
-    <script src="..\\script.js"></script>
+    <div class="explication">
+        <h2 id="h2_boite2">Trois arènes disponibles.</h2>
+        <p id="p_boite2">Prenez place dans nos trois arènes officielles : Destination Finale, Dreamland et Champs de
+            Bataille.</p>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide2" src="../img/dreamland.avif" alt="dreamland">
+                <img id="slide1" src="../img/battlefield.avif" alt="battlefield">
+                <img id="slide3" src="../img/final_destination.avif" alt="final destination">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide3"></a>
+                <a href="#slide2"></a>
+                <a href="#slide1"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Evan Estrems. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
 
 </body>
 

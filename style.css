@@ -20,8 +20,11 @@ a {
     padding: 0px;
 }
 
-body {
+html, body {
     background-color: #FCFCFC;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -114,9 +117,7 @@ h3 {
 @media (max-width: 767px) {
     .accroche {
         padding: 10% 5%;
-        /* Ajustez les marges pour s'adapter aux écrans plus petits */
         font-size: 10px;
-        /* Ajustez la taille de la police pour les appareils mobiles */
     }
 }
 
@@ -291,6 +292,7 @@ footer {
     padding: 15px;
     background-color: #E0E0E0;
     font-family: 'Montserrat';
+    text-align: center;
 }
 
 #logo_smash {
@@ -302,11 +304,12 @@ footer {
 .connexion {
     background-color: #E0E0E0;
     text-align: center;
-    margin: 3rem auto 3rem auto;
+    margin: 3rem auto 0 auto;
     width: fit-content;
     padding: 2rem;
     border-radius: 10px;
     line-height: 2;
+    max-width: 440px;
 }
 
 input {
@@ -335,6 +338,12 @@ label {
     border-radius: 10px;
 }
 
-#boutonConnexion::hover {
-    background-color: red;
+.containerConnexion {
+    flex-grow: 1;
+}
+
+.error-message {
+    color: #B54548;
+    font-weight: bolder;
+    text-align: center;
 }

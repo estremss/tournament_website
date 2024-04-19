@@ -6,17 +6,19 @@ function validateForm() {
     var monExprRegLetter = /^[A-Za-z]+$/
 
     if (!username.match(monExprRegLetter)) {
-        document.getElementById("usernameError").innerHTML = "Le nom d'utilisateur doit contenir uniquement des lettres.";
+        document.getElementById("usernameError").innerHTML = "N'utilisez que des lettres.";
+        setTimeout(function() {
+            document.getElementById("usernameError").innerHTML = "";
+        }, 2000);
         return false;
-    } else {
-        document.getElementById("usernameError").innerHTML = "";
     }
 
-    if (userInput != 'smwm') {
-        alert('Captcha incorrect. Veuillez réessayer.');
-        return false
-    }
-    else {
-        document.getElementById("usernameError").innerHTML = "";
+    if (userInput !== 'smwm') {
+        var errorMessage = 'Captcha incorrect';
+        document.getElementById("captchaError").innerHTML = errorMessage;
+        setTimeout(function() {
+            document.getElementById("captchaError").innerHTML = "";
+        }, 2000);
+        return false;
     }
 }

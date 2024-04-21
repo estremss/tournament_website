@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
@@ -25,10 +26,60 @@
         <ul>
             <li><a href="index.html">ACCUEIL</a></li>
             <li><a href="regles.html">RÈGLES</a></li>
-            <li><a href="personnages.html">PERSONNAGES</a></li>
             <li><a href="apropos.html">À PROPOS</a></li>
+            <li><a id="deconnexionLink" onclick="return Deconnexion()" href="index.html">DÉCONNEXION</a></li>
         </ul>
     </nav>
+
+    <h1>Menu de Création</h1>
+
+    <div class="menu-container">
+        <div class="menu-items">
+            <a href="index.html">
+                <img src="../img/menu_perso.webp" alt="Menu Personnages">
+                <p>Enregistrer Joueur</p>
+            </a>
+        </div>
+        <div class="menu-items">
+            <a href="index.html">
+                <img src="../img/menu_perso.webp" alt="Menu Personnages">
+                <p>Enregistrer Joueur</p>
+            </a>
+        </div>
+        <div class="menu-items">
+            <a href="index.html">
+                <img src="../img/menu_perso.webp" alt="Menu Personnages">
+                <p>Enregistrer Joueur</p>
+            </a>
+        </div>
+        <div class="menu-items">
+            <a href="index.html">
+                <img src="../img/menu_perso.webp" alt="Menu Personnages">
+                <p>Enregistrer Joueur</p>
+            </a>
+        </div>
+        <div class="menu-items">
+            <a href="index.html">
+                <img src="../img/menu_perso.webp" alt="Menu Personnages">
+                <p>Enregistrer Joueur</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        var deconnexionLink = document.getElementById("deconnexionLink");
+
+        deconnexionLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var confirmation = confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
+
+            if (confirmation) {
+                window.location.href = deconnexionLink.href;
+            }
+        });
+    </script>
+
 </body>
 
 </html>

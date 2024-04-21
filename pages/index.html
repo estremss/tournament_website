@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
@@ -26,15 +27,15 @@
         <ul>
             <li><a href="index.html">ACCUEIL</a></li>
             <li><a href="regles.html">RÈGLES</a></li>
-            <li><a href="personnages.html">PERSONNAGES</a></li>
             <li><a href="apropos.html">À PROPOS</a></li>
+            <li><a href="connexion.html">CONNEXION</a></li>
         </ul>
     </nav>
 
     <div class="accroche">
         <h2>Vous souhaitez animer vos soirées en organisant des tournois Smash Bros ?</h2>
         <h3>C'est possible en seulement quelques clics grâce à notre générateur de tournoi en ligne.</h3>
-        <button id="boutonCommencer">COMMENCER</button>
+        <button id="boutonCommencer" onclick="return Redirection()">COMMENCER</button>
     </div>
 
     <div class="explication">
@@ -46,7 +47,7 @@
             de créer des souvenirs impérissables et de repousser les limites de vos compétences de joueur.</p>
     </div>
 
-    <img id="logo_smash" src="../img/ssbu_logo.png" alt="logo smash bros">
+    <img class="explication" id="logo_smash" src="../img/ssbu_logo.png" alt="logo smash bros">
 
     <div class="explication">
         <h2 id="h2_boite2">Trois arènes disponibles.</h2>

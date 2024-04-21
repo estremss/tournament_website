@@ -20,9 +20,14 @@ a {
     padding: 0px;
 }
 
-html,
 body {
     background-color: #FCFCFC;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#connexion-html {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -32,6 +37,7 @@ h1 {
     text-align: center;
     padding: 30px;
     font-size: 45px;
+    font-family: 'Montserrat';
 }
 
 .entete {
@@ -187,7 +193,7 @@ nav a:hover {
     background-color: #F0F0F0;
     margin: auto;
     vertical-align: baseline;
-    max-width: 65%;
+    max-width: 1000px;
     padding: 30px;
     border-radius: 15px;
     font-family: 'Montserrat';
@@ -299,19 +305,18 @@ footer {
 #logo_smash {
     margin: 5% auto 5% auto;
     display: block;
-    max-width: 50%;
+    background-color: transparent;
+    width: 50%;
 }
 
 .connexion {
     background-color: #c2c2c2;
     text-align: center;
-    margin: 3rem auto 0 auto;
-    width: fit-content;
+    width: 300px;
     box-shadow: 5px 5px 50px 5px #000000;
     padding: 2rem;
     border-radius: 10px;
     line-height: 2;
-    max-width: 440px;
 }
 
 input {
@@ -346,10 +351,52 @@ label {
     background-repeat: no-repeat;
     background-position: center;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .error-message {
     color: #B54548;
     font-weight: bolder;
     text-align: center;
+}
+
+.menu-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 45px;
+    background-color: #F0F0F0;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.menu-items {
+    font-family: 'Montserrat';
+    text-align: center;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.menu-items p {
+    color: white;
+}
+
+.menu-items img {
+    width: 250px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.menu-items:hover {
+    transform: scale(1.05);
 }

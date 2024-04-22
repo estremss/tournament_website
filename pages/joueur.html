@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr" class="connexion-html">
+
+<head>
+    <title>Tournoi SSBU</title>
+    <meta charset="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/joueur.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="entete">
+        <h1 class="archivo"><a href="./index.html">Smash Bros Ultimate Tournament</a></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="regles.html">RÈGLES</a></li>
+            <li><a href="apropos.html">À PROPOS</a></li>
+            <li><a onclick="return Deconnexion()" href="index.html">DÉCONNEXION</a></li>
+        </ul>
+    </nav>
+
+    <div class="joueur-container">
+        <h1>Enregistrer Joueur</h1>
+        <div class="container-enregistrement">
+            <form>
+                <div class="items-enregistrement">
+                    <label for="nom"></label>
+                    <input type="text" placeholder=" Nom" id="nom" required>
+                </div>
+                <div class="items-enregistrement">
+                    <label for="prenom"></label>
+                    <input type="text" placeholder=" Prénom" id="prenom" required>
+                </div>
+                <div class="items-enregistrement">
+                    <label for="personnage"></label>
+                    <select name="personnage" id="personnage">
+                        <option value="">Choix du Personnage</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="parrot">Parrot</option>
+                        <option value="spider">Spider</option>
+                        <option value="goldfish">Goldfish</option>
+                      </select>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Evan Estrems. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -6,13 +6,16 @@
     padding: 30px;
     border-radius: 10px;
     max-width: 70%;
-
     flex-wrap: wrap;
     justify-content: center;
 
 }
 
 .container-menu {
+    background-image: url("../img/Smash_Ball_transparent.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
     flex-grow: 1;
 }
 

@@ -17,3 +17,16 @@
     border-radius: 10px;
     line-height: 2;
 }
+
+.retour-menu {
+    font-size: 80px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    color: black;
+}
+
+.fleche {
+    height: 80px;
+    width: auto;
+    margin-left: 5px;
+}

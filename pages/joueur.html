@@ -2,8 +2,10 @@
 <html lang="fr" class="connexion-html">
 
 <head>
-    <title>Tournoi SSBU</title>
+    <title>Ajout Joueur | Tournoi SSBU</title>
     <meta charset="utf-8">
+
+    <link rel="icon" href="../img/Smash_Ball.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +36,12 @@
     </nav>
 
     <div class="joueur-container">
+        <div class="retour-menu">
+            <a href="./menu.html">
+                <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
+                Menu
+            </a>
+        </div>
         <h1>Enregistrer Joueur</h1>
         <div class="container-enregistrement">
             <form>
@@ -44,18 +52,6 @@
                 <div class="items-enregistrement">
                     <label for="prenom"></label>
                     <input type="text" placeholder=" Prénom" id="prenom" required>
-                </div>
-                <div class="items-enregistrement">
-                    <label for="personnage"></label>
-                    <select name="personnage" id="personnage">
-                        <option value="">Choix du Personnage</option>
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="hamster">Hamster</option>
-                        <option value="parrot">Parrot</option>
-                        <option value="spider">Spider</option>
-                        <option value="goldfish">Goldfish</option>
-                      </select>
                 </div>
             </form>
         </div>

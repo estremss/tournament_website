@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+
+}
+
 .joueur-container {
     background-image: url("../img/kirby.png");
     background-repeat: no-repeat;
@@ -19,14 +24,61 @@
 }
 
 .retour-menu {
-    font-size: 80px;
+    margin-left: 5%;
+    font-size: 60px;
     font-family: 'Montserrat';
     font-weight: bolder;
     color: black;
 }
 
+.retour-menu img:hover, .retour-menu:hover {
+    transform: scale(1.01);
+    transform-origin: top left;
+}
+
+@media (max-width: 768px) {
+    .retour-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .fleche {
-    height: 80px;
+    height: 40px;
     width: auto;
     margin-left: 5px;
+}
+
+.choix-manette input {
+    display: none;
+}
+
+.bouton-radio img {
+    width: 40px;
+}
+
+.choix-manette input:checked + .bouton-radio {
+    background-color: white;
+    transform: scale(1.02);
+    font-weight: bolder;
+}
+
+.bouton-radio {
+    border-radius: 20px;
+    width: 35%;
+    height: fit-content;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 80px;
+}
+
+.bouton-radio p {
+    line-height: 1;
+    font-family: 'Montserrat';
 }

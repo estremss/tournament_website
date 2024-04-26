@@ -126,10 +126,11 @@ footer {
 
 input {
     font-family: 'Montserrat';
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    border: solid rgba(75, 75, 75, 0.527);
 }
 
 .error-message {
@@ -139,8 +140,36 @@ input {
 }
 
 select {
+    margin-top: 20px;
     width: 100%;
-    height: 25px;
-    padding-left: 4px;
+    height: 30px;
+    padding-left: 7px;
     margin-bottom: 5px;
+}
+
+.retour-menu {
+    margin-left: 5%;
+    font-size: 60px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    color: black;
+}
+
+.retour-menu img:hover,
+.retour-menu:hover {
+    transform: scale(1.01);
+    transform-origin: top left;
+}
+
+@media (max-width: 768px) {
+    .retour-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.fleche {
+    height: 40px;
+    width: auto;
+    margin-left: 5px;
 }

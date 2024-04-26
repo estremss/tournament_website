@@ -23,7 +23,7 @@
 
 <body>
     <div class="entete">
-        <h1 class="archivo"><a href="./index.html">Smash Bros Ultimate Tournament</a></h1>
+        <h1 class="archivo"><a href="./index.html">Tournoi Smash Bros Ultimate</a></h1>
     </div>
 
     <nav>
@@ -43,8 +43,8 @@
             </a>
         </div>
         <h1>Enregistrer Joueur</h1>
-        <div class="container-enregistrement">
-            <form>
+        <div >
+            <form class="container-enregistrement">
                 <div class="items-enregistrement">
                     <label for="nom"></label>
                     <input type="text" placeholder=" Nom" id="nom" required>
@@ -53,7 +53,7 @@
                     <label for="prenom"></label>
                     <input type="text" placeholder=" Prénom" id="prenom" required>
                 </div>
-                <div>
+                <div class="container-bouton">
                     <label class="choix-manette">
                         <input type="radio" name="manette">
                         <div class="bouton-radio">
@@ -70,6 +70,20 @@
                         </div>
                         </input>
                     </label>
+                </div>
+                <div>
+                    <select>
+                        <option selected disabled>Nationalité</option>
+                        <option>France</option>
+                        <option>Allemagne</option>
+                        <option>Espagne</option>
+                        <option>Irelande</option>
+                        <option>Danemark</option>
+                        <option>Roumanie</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Enregistrer" id="submit-joueur">
                 </div>
             </form>
         </div>

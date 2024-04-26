@@ -1,6 +1,5 @@
 body {
     overflow-x: hidden;
-
 }
 
 .joueur-container {
@@ -13,40 +12,10 @@ body {
 
 .container-enregistrement {
     margin: 0 auto;
-    display: flex;
     background-color: #E0E0E0;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 300px;
     padding: 5%;
     border-radius: 10px;
-    line-height: 2;
-}
-
-.retour-menu {
-    margin-left: 5%;
-    font-size: 60px;
-    font-family: 'Montserrat';
-    font-weight: bolder;
-    color: black;
-}
-
-.retour-menu img:hover, .retour-menu:hover {
-    transform: scale(1.01);
-    transform-origin: top left;
-}
-
-@media (max-width: 768px) {
-    .retour-menu {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.fleche {
-    height: 40px;
-    width: auto;
-    margin-left: 5px;
 }
 
 .choix-manette input {
@@ -57,28 +26,44 @@ body {
     width: 40px;
 }
 
-.choix-manette input:checked + .bouton-radio {
-    background-color: white;
-    transform: scale(1.02);
+.choix-manette input:checked+.bouton-radio {
+    background-color: rgb(240, 240, 240);
     font-weight: bolder;
+    border: solid black;
 }
 
 .bouton-radio {
     border-radius: 20px;
-    width: 35%;
+    width: 110px;
     height: fit-content;
-    background-color: rgb(240, 240, 240);
+    background-color: #CECECE;
     padding: 10px;
     text-align: center;
     position: relative;
     cursor: pointer;
-    float: left;
-    margin-right: 10px;
-    margin-left: 10px;
     height: 80px;
+}
+
+.bouton-radio:hover {
+    background-color: #d4d4d4;
 }
 
 .bouton-radio p {
     line-height: 1;
     font-family: 'Montserrat';
+}
+
+.container-bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#submit-joueur {
+    margin-top: 30px;
+    width: auto;
+    padding-inline: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

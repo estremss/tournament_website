@@ -60,10 +60,17 @@ body {
     gap: 15px;
 }
 
+.submit-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
 #submit-joueur {
     margin-top: 30px;
     width: auto;
-    padding-inline: 20px;
+    padding-inline: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+    cursor: pointer;
 }

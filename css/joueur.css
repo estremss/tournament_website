@@ -2,20 +2,8 @@ body {
     overflow-x: hidden;
 }
 
-.joueur-container {
-    background-image: url("../img/kirby.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    flex-grow: 1;
-}
-
-.container-enregistrement {
-    margin: 0 auto;
-    background-color: #E0E0E0;
-    width: 300px;
-    padding: 5%;
-    border-radius: 10px;
+.entete {
+    font-family: 'Archivo Black';
 }
 
 .choix-manette input {
@@ -53,7 +41,12 @@ body {
     font-family: 'Montserrat';
 }
 
+select {
+    margin-top: 0;
+}
+
 .container-bouton {
+    margin-block: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,15 +55,31 @@ body {
 
 .submit-container {
     display: flex;
-    margin: 0 auto;
     justify-content: center;
 }
 
-#submit-joueur {
+.submit-joueur {
     margin-top: 30px;
     width: auto;
     padding-inline: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
+}
+
+#choix-sexe {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin: 0;
+    margin-right: 4px;
+    margin-left: 20px;
+}
+
+* {
+    font-family: 'Montserrat';
 }

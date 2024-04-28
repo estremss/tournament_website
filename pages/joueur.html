@@ -23,7 +23,7 @@
 
 <body>
     <div class="entete">
-        <h1 class="archivo"><a href="./index.html">Tournoi Smash Bros Ultimate</a></h1>
+        <h1><a href="./index.html">Tournoi Smash Bros Ultimate</a></h1>
     </div>
 
     <nav>
@@ -35,27 +35,48 @@
         </ul>
     </nav>
 
+    <h1>Enregistrer Joueur</h1>
+    <div class="retour-menu">
+        <a href="./menu.html">
+            <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
+            Menu
+        </a>
+    </div>
+
     <div class="joueur-container">
-        <div class="retour-menu">
-            <a href="./menu.html">
-                <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
-                Menu
-            </a>
-        </div>
-        <h1>Enregistrer Joueur</h1>
-        <div >
-            <form class="container-enregistrement">
-                <div class="items-enregistrement">
-                    <label for="nom"></label>
-                    <input type="text" placeholder=" Nom" id="nom" required>
+        <div>
+            <form class="container-enregistrement" id="formulaire-joueur">
+                <h1>Formulaire</h1>
+                <div id="choix-sexe">
+                    <p>Sexe : </p>
+                    <input type="radio" id="homme" name="sexe" value="homme" required />
+                    <label for="homme">Homme</label>
+
+                    <input type="radio" id="femme" name="sexe" value="femme" />
+                    <label for="femme">Femme</label>
                 </div>
                 <div class="items-enregistrement">
-                    <label for="prenom"></label>
                     <input type="text" placeholder=" Prénom" id="prenom" required>
+                </div>
+                <p id="erreur-prenom" class="error-message"></p>
+                <div class="items-enregistrement">
+                    <input type="text" placeholder=" Nom" id="nom" required>
+                </div>
+                <p id="erreur-nom" class="error-message"></p>
+                <div>
+                    <select id="personnage" required>
+                        <option selected disabled>Personnage</option>
+                        <option>Mario</option>
+                        <option>Captain Falcon</option>
+                        <option>Donkey Kong</option>
+                        <option>Cloud</option>
+                        <option>Samus</option>
+                        <option>Snake</option>
+                    </select>
                 </div>
                 <div class="container-bouton">
                     <label class="choix-manette">
-                        <input type="radio" name="manette">
+                        <input type="radio" name="manette" value="Manette Pro" required>
                         <div class="bouton-radio">
                             <img src="../img/pro_controller.png" alt="Manette Pro">
                             <p>Manette Pro</p>
@@ -63,7 +84,7 @@
                         </input>
                     </label>
                     <label class="choix-manette">
-                        <input type="radio" name="manette">
+                        <input type="radio" name="manette" value="Manette Gamecube">
                         <div class="bouton-radio">
                             <img src="../img/gamecube.png" alt="Manette Gamecube">
                             <p>Manette Gamecube</p>
@@ -72,29 +93,36 @@
                     </label>
                 </div>
                 <div>
-                    <select>
+                    <select id="nationalite" required>
                         <option selected disabled>Nationalité</option>
                         <option>France</option>
                         <option>Allemagne</option>
                         <option>Espagne</option>
-                        <option>Irelande</option>
+                        <option>Irlande</option>
                         <option>Danemark</option>
                         <option>Roumanie</option>
                     </select>
                 </div>
                 <div class="submit-container">
-                    <input type="submit" value="Enregistrer" id="submit-joueur">
+                    <input type="submit" value="Enregistrer" class="submit-joueur">
                 </div>
             </form>
         </div>
 
+
+        <div class="container-enregistrement">
+            <h1>Liste des joueurs</h1>
+            <div id="listeJoueurs"></div>
+        </div>
     </div>
+
 
     <footer>
         <p>&copy; 2024 Evan Estrems. Tous droits réservés.</p>
     </footer>
 
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/joueur.js"></script>
 </body>
 
 </html>

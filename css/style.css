@@ -173,3 +173,34 @@ select {
     width: auto;
     margin-left: 5px;
 }
+
+.joueur-container {
+    background-image: url("../img/kirby.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.container-enregistrement {
+    margin: 0;
+    background-color: #E0E0E0;
+    width: 300px;
+    padding-inline: 50px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+@media (max-width: 880px) {
+    .container-enregistrement {
+        min-height: auto;
+        height: auto;
+    }
+}

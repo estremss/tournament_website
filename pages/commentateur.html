@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" class="connexion-html">
+
+<head>
+    <title>Ajout Commentateur | Tournoi SSBU</title>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="../img/Smash_Ball.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/joueur.css">
+    <link rel="stylesheet" href="../css/commentateur.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="entete">
+        <h1><a href="./index.html">Tournoi Smash Bros Ultimate</a></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="regles.html">RÈGLES</a></li>
+            <li><a href="apropos.html">À PROPOS</a></li>
+            <li><a onclick="return Deconnexion()" href="index.html">DÉCONNEXION</a></li>
+        </ul>
+    </nav>
+
+    <h1>Enregistrer Commentateur</h1>
+    <div class="retour-menu">
+        <a href="./menu.html">
+            <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
+            Menu
+        </a>
+    </div>
+
+    <div class="joueur-container">
+        <div>
+            <form class="container-enregistrement" id="formulaire-joueur">
+                <h1>Formulaire</h1>
+                <div id="container-commentateur">
+                    <div id="choix-sexe">
+                        <p>Sexe : </p>
+                        <input type="radio" id="homme" name="sexe" value="homme" required />
+                        <label for="homme">Homme</label>
+
+                        <input type="radio" id="femme" name="sexe" value="femme" />
+                        <label for="femme">Femme</label>
+                    </div>
+                    <div class="items-enregistrement">
+                        <label for="prenom">Prénom du commentateur</label>
+                        <input type="text" placeholder=" Prénom" id="prenom" required>
+                    </div>
+                    <p id="erreur-prenom" class="error-message"></p>
+                    <div class="items-enregistrement">
+                        <label for="nom">Nom du commentateur</label>
+
+                        <input type="text" placeholder=" Nom" id="nom" required>
+                    </div>
+                    <p id="erreur-nom" class="error-message"></p>
+                    <div>
+                        <select id="nationalite" required>
+                            <option selected disabled>Nationalité</option>
+                            <option>France</option>
+                            <option>Allemagne</option>
+                            <option>Espagne</option>
+                            <option>Irlande</option>
+                            <option>Danemark</option>
+                            <option>Roumanie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <input type="submit" value="Enregistrer" class="submit-joueur">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="container-enregistrement">
+            <h1>Liste</h1>
+            <div id="listeJoueurs"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Evan Estrems. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/commentateur.js"></script>
+</body>
+
+</html>

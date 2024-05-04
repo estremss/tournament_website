@@ -2,10 +2,10 @@
 <html lang="fr" class="connexion-html">
 
 <head>
-    <title>Résultats | Tournoi SSBU</title>
+    <title>Ajout Commentateur | Tournoi SSBU</title>
     <meta charset="utf-8">
 
-    <link rel="icon" href="../img/Smash_Ball.png">
+    <link rel="icon" href="./img/Smash_Ball.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/joueur.css">
-    <link rel="stylesheet" href="../css/enregistrer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/joueur.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,10 +36,10 @@
         </ul>
     </nav>
 
-    <h1>Enregistrer Résultats</h1>
+    <h1>Enregistrer Commentateur</h1>
     <div class="retour-menu">
         <a href="./menu.html">
-            <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
+            <img src="./img/arrow.png" alt="Flèche retour" class="fleche">
             Menu
         </a>
     </div>
@@ -50,20 +49,31 @@
             <form class="container-enregistrement" id="formulaire-joueur">
                 <h1>Formulaire</h1>
                 <div id="container-commentateur">
-                    <select id="selectMatch" required onchange="afficherBoutonsRadio()">
-                        <option selected disabled value="">Sélectionnez un match</option>
-                    </select>
-                    <p style="margin-top: 5px;">Vainqueur :</p>
-                    <div id="boutonsRadio" style="display:none;">
-                        <label for="joueur1"></label>
-                        <input type="radio" id="joueur1" name="vainqueur" required>
-                        <label for="joueur2"></label>
-                        <input type="radio" id="joueur2" name="vainqueur">
+                    <div class="items-enregistrement">
+                        <label for="prenom">Prénom du commentateur</label>
+                        <input type="text" placeholder=" Prénom" id="prenom" required>
+                    </div>
+                    <p id="erreur-prenom" class="error-message"></p>
+                    <div class="items-enregistrement">
+                        <label for="nom">Nom du commentateur</label>
+
+                        <input type="text" placeholder=" Nom" id="nom" required>
+                    </div>
+                    <p id="erreur-nom" class="error-message"></p>
+                    <div>
+                        <select id="nationalite" required>
+                            <option selected disabled value="">Nationalité</option>
+                            <option>France</option>
+                            <option>Allemagne</option>
+                            <option>Espagne</option>
+                            <option>Irlande</option>
+                            <option>Danemark</option>
+                            <option>Roumanie</option>
+                        </select>
                     </div>
                 </div>
-
                 <div class="submit-container">
-                    <input onclick="enregistrerVainqueur()" type="submit" value="Enregistrer" class="submit-joueur">
+                    <input type="submit" value="Enregistrer" class="submit-joueur">
                 </div>
             </form>
         </div>
@@ -80,8 +90,8 @@
         <p>&copy; 2024 Evan Estrems. Tous droits réservés.</p>
     </footer>
 
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/enregistrer.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/commentateur.js"></script>
 </body>
 
 </html>

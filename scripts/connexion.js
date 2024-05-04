@@ -22,6 +22,6 @@ function validateForm() {
 
     sessionStorage.setItem('connected', true);
 
-    window.location.href = "../pages/menu.html";
+    window.location.href = "menu.html";
     return false;
 }

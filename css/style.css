@@ -28,7 +28,7 @@ body {
 }
 
 .entete {
-    background-image: url("../img/upvd_noir.png");
+    background-image: url("./img/upvd_noir.png");
     background-repeat: no-repeat;
     background-position-x: 25px;
     background-position-y: 17px;

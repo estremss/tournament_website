@@ -2,7 +2,7 @@
 <html lang="fr" class="connexion-html">
 
 <head>
-    <title>Ajout Commentateur | Tournoi SSBU</title>
+    <title>Planifier Match | Tournoi SSBU</title>
     <meta charset="utf-8">
 
     <link rel="icon" href="../img/Smash_Ball.png">
@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/joueur.css">
+    <link rel="stylesheet" href="../css/planifier.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,7 +37,7 @@
         </ul>
     </nav>
 
-    <h1>Enregistrer Commentateur</h1>
+    <h1>Planifier Match</h1>
     <div class="retour-menu">
         <a href="./menu.html">
             <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
@@ -49,28 +50,35 @@
             <form class="container-enregistrement" id="formulaire-joueur">
                 <h1>Formulaire</h1>
                 <div id="container-commentateur">
-                    <div class="items-enregistrement">
-                        <label for="prenom">Prénom du commentateur</label>
-                        <input type="text" placeholder=" Prénom" id="prenom" required>
-                    </div>
-                    <p id="erreur-prenom" class="error-message"></p>
-                    <div class="items-enregistrement">
-                        <label for="nom">Nom du commentateur</label>
-
-                        <input type="text" placeholder=" Nom" id="nom" required>
-                    </div>
-                    <p id="erreur-nom" class="error-message"></p>
                     <div>
-                        <select id="nationalite" required>
-                            <option selected disabled value="">Nationalité</option>
-                            <option>France</option>
-                            <option>Allemagne</option>
-                            <option>Espagne</option>
-                            <option>Irlande</option>
-                            <option>Danemark</option>
-                            <option>Roumanie</option>
+                        <select id="player1Select" required onchange="updatePlayer2Options()">
+                            <option selected disabled value="">Joueur 1</option>
                         </select>
                     </div>
+                    <div>
+                        <select id="player2Select" required onchange="updatePlayer1Options()">
+                            <option selected disabled value="">Joueur 2</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="commentateur" required>
+                            <option selected disabled value="">Commentateur</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="select-option" onchange="displayImage()" required>
+                            <option selected disabled value="">Sélectionnez une arène</option>
+                            <option value="../img/final_destination">Destination Finale</option>
+                            <option value="../img/battlefield">Petit champ de bataille</option>
+                            <option value="../img/dreamland">Dreamland</option>
+                        </select>
+                        <div id="image-container">
+                            <img id="displayed-image" src="" alt="Arène choisie" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input id="date" type="date" value="2024-05-06" min="2024-05-06"/>
                 </div>
                 <div class="submit-container">
                     <input type="submit" value="Enregistrer" class="submit-joueur">
@@ -80,7 +88,7 @@
 
 
         <div class="container-enregistrement">
-            <h1>Liste</h1>
+            <h1>Matchs</h1>
             <div id="listeJoueurs"></div>
         </div>
     </div>
@@ -91,7 +99,7 @@
     </footer>
 
     <script src="../scripts/script.js"></script>
-    <script src="../scripts/commentateur.js"></script>
+    <script src="../scripts/planifier.js"></script>
 </body>
 
 </html>

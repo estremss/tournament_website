@@ -1,6 +1,5 @@
 // Déclare des listes pour stocker les données
-var hommesListe = [];
-var femmesListe = [];
+var commentateurListe = [];
 
 // Récupère le formulaire par son ID
 var formulaire = document.getElementById("formulaire-joueur");
@@ -14,10 +13,6 @@ formulaire.addEventListener("submit", function (event) {
     var nom = document.getElementById("nom").value;
     var prenom = document.getElementById("prenom").value;
     var nationalite = document.getElementById("nationalite").value;
-
-    // Récupère la valeur du sexe sélectionné
-    var sexeSelectionne = document.querySelector('input[name="sexe"]:checked');
-    var sexe = sexeSelectionne ? sexeSelectionne.value : null;
 
     var nomValide = /^[a-zA-Z]+$/.test(nom);
     var prenomValide = /^[a-zA-Z]+$/.test(prenom);
@@ -38,26 +33,24 @@ formulaire.addEventListener("submit", function (event) {
         return; // Arrête l'exécution de la fonction
     }
 
-    // Vérifie si le sexe est sélectionné
-    if (sexe) {
-        // Stocke les données dans la liste appropriée en fonction du sexe
-        if (sexe === "homme") {
-            hommesListe.push({ nom: nom, prenom: prenom, nationalite: nationalite });
-        } else if (sexe === "femme") {
-            femmesListe.push({ nom: nom, prenom: prenom, nationalite: nationalite });
-        }
+    let nouveauCommentateur = {
+        prenom: prenom,
+        nom : nom,
+        nationalite: nationalite,
+    };
 
-        afficherJoueurs();
+    commentateurListe.push({ nom: nom, prenom: prenom, nationalite: nationalite });
+    addPlayer(nouveauCommentateur);
 
-        // Efface les valeurs des champs après soumission
-        document.getElementById("nom").value = "";
-        document.getElementById("prenom").value = "";
-        document.getElementById("nationalite").value = "Nationalité";
+    afficherJoueurs();
 
-        // Affiche les listes de données (à des fins de démonstration)
-        console.log("Hommes:", hommesListe);
-        console.log("Femmes:", femmesListe);
-    }
+    // Efface les valeurs des champs après soumission
+    document.getElementById("nom").value = "";
+    document.getElementById("prenom").value = "";
+    document.getElementById("nationalite").value = "Nationalité";
+
+    // Affiche les listes de données (à des fins de démonstration)
+    console.log("Commentateurs:", commentateurListe);
 });
 
 // Fonction pour afficher les joueurs
@@ -68,23 +61,41 @@ function afficherJoueurs() {
     // Vide l'élément pour éviter d'afficher les joueurs en double
     listeJoueurs.innerHTML = "";
 
-    // Affiche chaque joueur dans la liste des hommes
-    hommesListe.forEach(function (joueur, index) {
+    // Récupérer la liste des joueurs depuis le sessionStorage
+    var joueursListe = JSON.parse(sessionStorage.getItem('commentatorList')) || [];
+
+    // Affiche chaque joueur dans la liste des joueurs
+    joueursListe.forEach(function (joueur, index) {
         var joueurDiv = document.createElement("div");
-        joueurDiv.innerHTML = "<strong>Commentateur " + (index + 1) + " (Homme)</strong><br>" +
+        joueurDiv.innerHTML = "<strong>Commentateur " + (index + 1) + "</strong><br>" +
             "Nom: " + joueur.nom + " " + joueur.prenom + "<br>" +
             "Nationalité: " + joueur.nationalite + "<br><br>";
         listeJoueurs.appendChild(joueurDiv);
     });
+}
 
-    // Affiche chaque joueur dans la liste des femmes
-    femmesListe.forEach(function (joueur, index) {
-        var joueurDiv = document.createElement("div");
-        joueurDiv.innerHTML = "<strong>Commentateur " + (index + 1) + " (Femme)</strong><br>" +
-        "Nom: " + joueur.nom + " " + joueur.prenom + "<br>" +
-        "Nationalité: " + joueur.nationalite + "<br><br>";
-        listeJoueurs.appendChild(joueurDiv);
-    });
+
+// Fonction pour récupérer la liste de joueurs depuis sessionStorage
+function getPlayersListFromSessionStorage() {
+    // Si la liste existe dans sessionStorage, la récupérer et la parser en tant qu'objet JavaScript
+    // Sinon, retourner une liste vide
+    return JSON.parse(sessionStorage.getItem('commentatorList')) || [];
+}
+
+// Fonction pour sauvegarder la liste de joueurs dans sessionStorage
+function savePlayersListToSessionStorage(playersList) {
+    // Convertir la liste de joueurs en chaîne JSON et la sauvegarder dans sessionStorage
+    sessionStorage.setItem('commentatorList', JSON.stringify(playersList));
+}
+
+// Fonction pour ajouter un joueur à la liste de joueurs
+function addPlayer(player) {
+    // Récupérer la liste de joueurs depuis sessionStorage
+    let playersList = getPlayersListFromSessionStorage();
+    // Ajouter le nouveau joueur à la liste
+    playersList.push(player);
+    // Sauvegarder la liste mise à jour dans sessionStorage
+    savePlayersListToSessionStorage(playersList);
 }
 
 // Appelle la fonction pour afficher les joueurs initialement

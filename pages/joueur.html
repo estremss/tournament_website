@@ -47,14 +47,6 @@
         <div>
             <form class="container-enregistrement" id="formulaire-joueur">
                 <h1>Formulaire</h1>
-                <div id="choix-sexe">
-                    <p>Sexe : </p>
-                    <input type="radio" id="homme" name="sexe" value="homme" required />
-                    <label for="homme">Homme</label>
-
-                    <input type="radio" id="femme" name="sexe" value="femme" />
-                    <label for="femme">Femme</label>
-                </div>
                 <div class="items-enregistrement">
                     <input type="text" placeholder=" Prénom" id="prenom" required>
                 </div>
@@ -65,7 +57,7 @@
                 <p id="erreur-nom" class="error-message"></p>
                 <div>
                     <select id="personnage" required>
-                        <option selected disabled>Personnage</option>
+                        <option selected disabled value="">Choix Personnage</option>
                         <option>Mario</option>
                         <option>Captain Falcon</option>
                         <option>Donkey Kong</option>
@@ -76,7 +68,7 @@
                 </div>
                 <div class="container-bouton">
                     <label class="choix-manette">
-                        <input type="radio" name="manette" value="Manette Pro" required>
+                        <input type="radio" name="manette" value="Manette Pro" checked>
                         <div class="bouton-radio">
                             <img src="../img/pro_controller.png" alt="Manette Pro">
                             <p>Manette Pro</p>
@@ -94,7 +86,7 @@
                 </div>
                 <div>
                     <select id="nationalite" required>
-                        <option selected disabled>Nationalité</option>
+                        <option selected disabled value="">Nationalité</option>
                         <option>France</option>
                         <option>Allemagne</option>
                         <option>Espagne</option>
@@ -111,7 +103,7 @@
 
 
         <div class="container-enregistrement">
-            <h1>Liste des joueurs</h1>
+            <h1>Joueurs</h1>
             <div id="listeJoueurs"></div>
         </div>
     </div>

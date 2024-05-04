@@ -20,6 +20,8 @@ function validateForm() {
         return false;
     }
 
+    sessionStorage.setItem('connected', true);
+
     window.location.href = "../pages/menu.html";
     return false;
 }

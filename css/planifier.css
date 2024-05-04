@@ -1,0 +1,21 @@
+#displayed-image {
+    width: 60%;
+    border-radius: 20px;
+    margin-top: 7px;
+    margin: 15px auto;
+    border: solid grey;
+}
+
+#date {
+    border: none;
+}
+
+select {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

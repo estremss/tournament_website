@@ -2,7 +2,7 @@
 <html lang="fr" class="connexion-html">
 
 <head>
-    <title>Ajout Commentateur | Tournoi SSBU</title>
+    <title>Résultats | Tournoi SSBU</title>
     <meta charset="utf-8">
 
     <link rel="icon" href="../img/Smash_Ball.png">
@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/joueur.css">
+    <link rel="stylesheet" href="../css/enregistrer.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,7 +37,7 @@
         </ul>
     </nav>
 
-    <h1>Enregistrer Commentateur</h1>
+    <h1>Enregistrer Résultats</h1>
     <div class="retour-menu">
         <a href="./menu.html">
             <img src="../img/arrow.png" alt="Flèche retour" class="fleche">
@@ -49,31 +50,20 @@
             <form class="container-enregistrement" id="formulaire-joueur">
                 <h1>Formulaire</h1>
                 <div id="container-commentateur">
-                    <div class="items-enregistrement">
-                        <label for="prenom">Prénom du commentateur</label>
-                        <input type="text" placeholder=" Prénom" id="prenom" required>
-                    </div>
-                    <p id="erreur-prenom" class="error-message"></p>
-                    <div class="items-enregistrement">
-                        <label for="nom">Nom du commentateur</label>
-
-                        <input type="text" placeholder=" Nom" id="nom" required>
-                    </div>
-                    <p id="erreur-nom" class="error-message"></p>
-                    <div>
-                        <select id="nationalite" required>
-                            <option selected disabled value="">Nationalité</option>
-                            <option>France</option>
-                            <option>Allemagne</option>
-                            <option>Espagne</option>
-                            <option>Irlande</option>
-                            <option>Danemark</option>
-                            <option>Roumanie</option>
-                        </select>
+                    <select id="selectMatch" required onchange="afficherBoutonsRadio()">
+                        <option selected disabled value="">Sélectionnez un match</option>
+                    </select>
+                    <p style="margin-top: 5px;">Vainqueur :</p>
+                    <div id="boutonsRadio" style="display:none;">
+                        <label for="joueur1"></label>
+                        <input type="radio" id="joueur1" name="vainqueur" required>
+                        <label for="joueur2"></label>
+                        <input type="radio" id="joueur2" name="vainqueur">
                     </div>
                 </div>
+
                 <div class="submit-container">
-                    <input type="submit" value="Enregistrer" class="submit-joueur">
+                    <input onclick="enregistrerVainqueur()" type="submit" value="Enregistrer" class="submit-joueur">
                 </div>
             </form>
         </div>
@@ -91,7 +81,7 @@
     </footer>
 
     <script src="../scripts/script.js"></script>
-    <script src="../scripts/commentateur.js"></script>
+    <script src="../scripts/enregistrer.js"></script>
 </body>
 
 </html>

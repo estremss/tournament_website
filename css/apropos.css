@@ -23,6 +23,17 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+    .container-regles {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .container-regles h1 {
+        font-size: 30px;
+    }
+}
+
 .item img {
     width: 300px;
 }

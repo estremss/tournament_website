@@ -31,7 +31,8 @@
             <li><a href="index.html">ACCUEIL</a></li>
             <li><a href="regles.html">RÈGLES</a></li>
             <li><a href="apropos.html">À PROPOS</a></li>
-            <li><a onclick="return Deconnexion()" href="index.html">DÉCONNEXION</a></li>
+            <li><a id="deconnexion" onclick="return Deconnexion()" href="index.html">DÉCONNEXION</a></li>
+            <li><a id="connexion"></a></li>
         </ul>
     </nav>
 
@@ -73,7 +74,6 @@
                             <img src="./img/pro_controller.png" alt="Manette Pro">
                             <p>Manette Pro</p>
                         </div>
-                        </input>
                     </label>
                     <label class="choix-manette">
                         <input type="radio" name="manette" value="Manette Gamecube">
@@ -81,7 +81,6 @@
                             <img src="./img/gamecube.png" alt="Manette Gamecube">
                             <p>Manette Gamecube</p>
                         </div>
-                        </input>
                     </label>
                 </div>
                 <div>
@@ -99,6 +98,8 @@
                     <input type="submit" value="Enregistrer" class="submit-joueur">
                 </div>
             </form>
+            
+
         </div>
 
 

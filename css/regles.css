@@ -21,6 +21,17 @@
     padding: 40px;
 }
 
+@media (max-width: 767px) {
+    .container-regles {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .container-regles h1 {
+        font-size: 30px;
+    }
+}
+
 * {
     font-family: 'Montserrat';
 }

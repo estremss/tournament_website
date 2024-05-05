@@ -37,7 +37,7 @@
         -3px -2px 5px black,
         -11px 7px 14px black,
         11px 2px 6px black;
-    background-image: url("../img/big_banniere_ssbu.webp"), url("./img/big_banniere_ssbu.webp");
+    background-image: url("../img/big_banniere_ssbu.webp");
     background-size: cover;
     background-attachment: local;
     animation: scroll 90s linear infinite;
@@ -83,7 +83,6 @@
     border-radius: 15px;
     object-fit: cover;
     float: left;
-    shape-outside: margin-box;
     margin: 0 40px 5px 0;
 }
 
@@ -103,7 +102,12 @@
 
 @media (max-width: 767px) {
     .explication {
-        max-width: 70%;
+        margin-inline: 0;
+        border-radius: 0;
+    }
+
+    .explication h2 {
+        font-size: 30px;
     }
 
     #illustration1 {
@@ -176,5 +180,6 @@
     margin: 5% auto 5% auto;
     display: block;
     background-color: transparent;
-    width: 50%;
+    width: 80%;
+    max-width: 600px;
 }

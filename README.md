@@ -1,10 +1,10 @@
-# Projet Front End Universitaire
+# Front End Project (University)
 
-## [Lien du site Web](https://estremss.github.io/tournament_website/)
+## [Website link](https://estremss.github.io/tournament_website/)
 
-## Utilisation des langages : HTML, CSS, Javascript
+## Languages restrictions : HTML, CSS, Javascript
 
-Ce site au thème Super Smash Bros permet d'enregistrer des résultats de parties de Super Smash Bros.
-Il intègre du SessionStorage et une page de connexion fictive.
+This Super Smash Bros-themed site allows users to record match results from Super Smash Bros games. 
+It includes SessionStorage and a mock login page.
 
-Le site est responsive et comprend une version mobile.
+The site is responsive and includes a mobile version.
